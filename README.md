@@ -1,8 +1,8 @@
-# Cuando y no es un número cualquiera · laboratorio
+# Modelos lineales generalizados y clasificación · laboratorio
 
 _Tiempo: 40 minutos en clase, el resto en casa · Nivel: intermedio (Python, pandas y la clase de regresión lineal)_
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nielspac177/glm-clasificacion-lab/blob/main/notebooks/LAB_GLM.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nielspac177/modelos-lineales-generalizados/blob/main/notebooks/laboratorio_modelos_lineales_generalizados.ipynb)
 
 ¿Esta tienda va a pedir tequila la próxima semana? Y si pide, ¿cuántas botellas? En 82% de las semanas la respuesta es cero, y cuando hay pedido casi siempre es una caja de 12. Una regresión lineal predice botellas negativas para 6.5% de las semanas. Este lab trata de los modelos que respetan el tipo de y: logística y LDA para un sí o no, Poisson y binomial negativa para conteos, logit fraccional para participaciones de mercado.
 
@@ -10,7 +10,7 @@ Los datos son las ventas reales de licor del estado de Iowa: pedidos semanales d
 
 ## Qué vas a ver
 
-En cada nivel escribes primero qué esperas y después corres la celda. Cuatro celdas tienen huecos `___` para completar.
+En cada nivel escribes primero qué esperas y después corres la celda. Las soluciones están en [modelos-lineales-generalizados-soluciones](https://github.com/nielspac177/modelos-lineales-generalizados-soluciones). Cuatro celdas tienen huecos `___` para completar.
 
 | Nivel | Qué haces | Lo que se descubre |
 | --- | --- | --- |
@@ -51,11 +51,11 @@ flowchart LR
 **En tu computadora:**
 
 ```bash
-git clone https://github.com/nielspac177/glm-clasificacion-lab.git
-cd glm-clasificacion-lab
+git clone https://github.com/nielspac177/modelos-lineales-generalizados.git
+cd modelos-lineales-generalizados
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e .
-jupyter notebook notebooks/LAB_GLM.ipynb
+jupyter notebook notebooks/laboratorio_modelos_lineales_generalizados.ipynb
 ```
 
 **En un notebook de Snowflake:** sube la carpeta del repo a tu workspace y agrega `statsmodels`, `scipy` y `scikit-learn` en **Packages**.
@@ -81,9 +81,9 @@ Las 400 tiendas son una muestra al azar (semilla fija) de las que compraron el p
 ## Cómo está organizado
 
 ```
-glm-clasificacion-lab/
+modelos-lineales-generalizados/
 ├── data/
-├── notebooks/LAB_GLM.ipynb
+├── notebooks/laboratorio_modelos_lineales_generalizados.ipynb
 ├── src/glm_lab/
 │   ├── datos.py           cargar_tequila, cargar_vodka, separar_por_fecha
 │   ├── clasificacion.py   momios, logit, inv_logit, umbral_por_costos, costo_total
